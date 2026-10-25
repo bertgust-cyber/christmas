@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html data-theme="night" lang="de">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+  <meta content="#101d35" name="theme-color"/>
+  <meta content="Unser kleines Winterdorf f&uuml;r ein gemeinsames Weihnachtsfest &ndash; Zusammenkommen, Erinnerungen und Weihnachtszauber." name="description"/>
+  <title>Weihnachten 2026</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Great+Vibes&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <div aria-hidden="true" class="aurora">
+  </div>
+  <canvas aria-hidden="true" id="sky">
+  </canvas>
+  <div class="wrap">
+   <header class="topbar">
+    <a class="brand" href="#start">
+      <span class="brand-mark">✦</span>
+      <span>WINTERDORF</span>
+    </a>
+    <div class="actions">
+     <button aria-label="Tag- und Nachtansicht wechseln" class="icon-btn" id="themeBtn" title="Tag/Nacht wechseln">
+      ☼
+     </button>
+     <button aria-label="Schneefall pausieren" class="icon-btn" id="snowBtn" title="Schneefall pausieren">
+      ❄
+     </button>
+    </div>
+   </header>
+<main id="siteContent">
+    <section class="hero hero--start" id="start">
+     <h1>Unser <span>Winterdorf</span></h1>
+     <div class="hero-cta">
+      <a class="btn primary" href="#termin">
+       🎄 Unser Familientreffen
+      </a>
+      <a class="btn soft" href="#spiel">
+       🎁 Weihnachtsspiel spielen
+      </a>
+     </div>
+     <div aria-label="Illustration eines verschneiten Weihnachtsdorfs" class="scene">
+      <svg aria-label="Verschneite H&auml;user, Tannen und ein kleiner Zug im Winterdorf" role="img" viewBox="0 0 1000 340">
+       <defs>
+        <linearGradient id="skygrad" x1="0" x2="0" y1="0" y2="1">
+         <stop stop-color="#0b1b39">
+         </stop>
+         <stop offset=".68" stop-color="#527d9c">
+         </stop>
+         <stop offset="1" stop-color="#d7e8ef">
+         </stop>
+        </linearGradient>
+        <linearGradient id="snowgrad" x1="0" x2="0" y1="0" y2="1">
+         <stop stop-color="#fff">
+         </stop>
+         <stop offset="1" stop-color="#cbdfe9">
+         </stop>
+        </linearGradient>
+       </defs>
+       <rect fill="url(#skygrad)" height="340" width="1000">
+       </rect>
+       <circle class="moon" cx="820" cy="67" fill="#fff3c9" r="32">
+       </circle>
+       <circle cx="808" cy="56" fill="#132c4b" r="32">
+       </circle>
+       <g fill="#fff5d4" opacity=".85">
+        <circle cx="105" cy="54" r="2">
+        </circle>
+        <circle cx="190" cy="91" r="1.7">
+        </circle>
+        <circle cx="300" cy="40" r="1.6">
+        </circle>
+        <circle cx="420" cy="79" r="2">
+        </circle>
+        <circle cx="585" cy="35" r="1.5">
+        </circle>
+        <circle cx="710" cy="113" r="1.5">
+        </circle>
+        <circle cx="920" cy="123" r="2">
+        </circle>
+        <circle cx="950" cy="38" r="1.4">
+        </circle>
+        <circle cx="520" cy="122" r="1.2">
+        </circle>
+       </g>
+       <!-- distant forest -->
+       <g fill="#183e50" opacity=".8">
+        <path d="M0 220 48 123 96 220 130 150 175 228 220 128 273 225 330 153 380 224 435 135 493 225 550 142 605 226 665 125 722 226 774 154 829 228 885 137 938 228 974 163 1000 215V340H0Z">
+        </path>
+       </g>
+       <!-- houses -->
+       <g>
+        <path d="M72 244V171L145 111 218 171V244Z" fill="#d6a77f">
+        </path>
+        <path d="M56 176 145 98 234 176 218 181 145 119 72 181Z" fill="#7e4d55">
+        </path>
+        <path d="M56 176 145 98 234 176" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="9">
+        </path>
+        <rect class="window-glow" fill="#f7d990" height="35" rx="4" width="29" x="92" y="184">
+        </rect>
+        <rect class="window-glow" fill="#f7d990" height="35" rx="4" width="29" x="166" y="184">
+        </rect>
+        <rect fill="#70454b" height="39" rx="7" width="28" x="132" y="205">
+        </rect>
+        <path d="M340 245V145L435 65 530 145V245Z" fill="#e7c5a4">
+        </path>
+        <path d="M321 150 435 52 549 150 530 155 435 78 340 155Z" fill="#7b4655">
+        </path>
+        <path d="M321 150 435 52 549 150" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="11">
+        </path>
+        <rect class="window-glow" fill="#ffe3a0" height="38" rx="5" width="32" x="365" y="162">
+        </rect>
+        <rect class="window-glow" fill="#ffe3a0" height="38" rx="5" width="32" x="420" y="162">
+        </rect>
+        <rect class="window-glow" fill="#ffe3a0" height="38" rx="5" width="32" x="475" y="162">
+        </rect>
+        <rect fill="#754753" height="40" rx="8" width="34" x="419" y="205">
+        </rect>
+        <rect fill="#a36c67" height="45" rx="3" width="22" x="453" y="71">
+        </rect>
+        <path d="M449 75h30" stroke="#fff" stroke-linecap="round" stroke-width="7">
+        </path>
+        <g class="smoke" fill="#dceaf0">
+         <circle cx="482" cy="49" r="8">
+         </circle>
+         <circle cx="490" cy="36" r="10">
+         </circle>
+        </g>
+        <g class="smoke" fill="#dceaf0">
+         <circle cx="487" cy="47" r="6">
+         </circle>
+         <circle cx="501" cy="28" r="8">
+         </circle>
+        </g>
+        <path d="M740 245V183L800 132 860 183V245Z" fill="#b9cbd0">
+        </path>
+        <path d="M725 187 800 122 875 187 860 191 800 145 740 191Z" fill="#3d5e71">
+        </path>
+        <path d="M725 187 800 122 875 187" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="8">
+        </path>
+        <rect class="window-glow" fill="#ffdfa0" height="30" rx="4" width="24" x="757" y="194">
+        </rect>
+        <rect class="window-glow" fill="#ffdfa0" height="30" rx="4" width="24" x="816" y="194">
+        </rect>
+        <rect fill="#3d5e71" height="38" rx="7" width="22" x="790" y="207">
+        </rect>
+       </g>
+       <!-- trees -->
+       <g>
+        <g transform="translate(265 118)">
+         <path d="M0 0-42 62H42Z" fill="#23685e">
+         </path>
+         <path d="M0 30-52 103H52Z" fill="#1b5a52">
+         </path>
+         <path d="M0 62-61 145H61Z" fill="#164a47">
+         </path>
+         <rect fill="#76503c" height="25" width="14" x="-7" y="143">
+         </rect>
+         <path d="M-42 62H42M-52 103H52" opacity=".9" stroke="#eaf5f4" stroke-width="5">
+         </path>
+         <path class="tree-star" d="m0 -15 5 10 11 2-8 8 2 11-10-5-10 5 2-11-8-8 11-2Z" fill="#f4d58a">
+         </path>
+        </g>
+        <g transform="translate(640 137) scale(.8)">
+         <path d="M0 0-42 62H42Z" fill="#23685e">
+         </path>
+         <path d="M0 30-52 103H52Z" fill="#1b5a52">
+         </path>
+         <path d="M0 62-61 145H61Z" fill="#164a47">
+         </path>
+         <rect fill="#76503c" height="25" width="14" x="-7" y="143">
+         </rect>
+         <path d="M-42 62H42M-52 103H52" opacity=".9" stroke="#eaf5f4" stroke-width="5">
+         </path>
+         <path class="tree-star" d="m0 -15 5 10 11 2-8 8 2 11-10-5-10 5 2-11-8-8 11-2Z" fill="#f4d58a">
+         </path>
+        </g>
+       </g>
+       <path d="M0 260Q150 235 310 261T630 258T1000 251V340H0Z" fill="url(#snowgrad)">
+       </path>
+       <path d="M0 293Q170 274 345 299T700 288T1000 292" fill="none" opacity=".8" stroke="#fff" stroke-width="4">
+       </path>
+       <!-- little train -->
+       <g transform="translate(575 266)">
+        <g fill="#a64f59">
+         <rect height="27" rx="6" width="54" x="0" y="0">
+         </rect>
+         <rect height="19" rx="4" width="26" x="10" y="-17">
+         </rect>
+         <rect height="20" rx="5" width="40" x="61" y="7">
+         </rect>
+         <rect fill="#477b70" height="20" rx="5" width="40" x="108" y="7">
+         </rect>
+        </g>
+        <g fill="#ffdf9c">
+         <rect height="11" rx="2" width="15" x="15" y="-12">
+         </rect>
+         <rect height="8" rx="2" width="10" x="69" y="11">
+         </rect>
+         <rect height="8" rx="2" width="10" x="82" y="11">
+         </rect>
+         <rect height="8" rx="2" width="10" x="116" y="11">
+         </rect>
+         <rect height="8" rx="2" width="10" x="129" y="11">
+         </rect>
+        </g>
+        <g fill="#263e52">
+         <circle cx="13" cy="27" r="7">
+         </circle>
+         <circle cx="42" cy="27" r="7">
+         </circle>
+         <circle cx="72" cy="27" r="5">
+         </circle>
+         <circle cx="90" cy="27" r="5">
+         </circle>
+         <circle cx="119" cy="27" r="5">
+         </circle>
+         <circle cx="137" cy="27" r="5">
+         </circle>
+        </g>
+        <path d="M22 -18q-10 -16 5 -20q-6 12 7 15" fill="#dbe9ee" opacity=".7">
+        </path>
+       </g>
+       <g fill="#fff" opacity=".9">
+        <circle cx="45" cy="270" r="3">
+        </circle>
+        <circle cx="225" cy="290" r="2">
+        </circle>
+        <circle cx="890" cy="267" r="3">
+        </circle>
+        <circle cx="942" cy="300" r="2">
+        </circle>
+        <circle cx="700" cy="316" r="2">
+        </circle>
+       </g>
+      </svg>
+     </div>
+    </section>
+    <nav aria-label="Hauptnavigation">
+     <a aria-current="true" href="#start">
+      Winterdorf
+     </a>
+     <a href="#termin">
+      Zusammentreffen
+     </a>
+     <a href="#zusagen">
+      Zusagen
+     </a>
+     <a href="#mitbringen" hidden>
+      Mitbringliste
+     </a>
+     <a href="#spiel">
+      Weihnachtsspiel
+     </a>
+    </nav>
+    <section class="reveal" id="termin">
+     <div class="section-head">
+      <h2>
+       Wann sehen wir uns?
+      </h2>
+     </div>
+     <div class="grid">
+      <article class="card date-card">
+       <span class="label">
+        📅 Datum
+       </span>
+       <strong id="eventDate">
+        Termin folgt
+       </strong>
+      </article>
+      <article class="card date-card">
+       <span class="label">
+        🕯️ Beginn
+       </span>
+       <strong id="eventTime">
+        Uhrzeit folgt
+       </strong>
+      </article>
+      <article class="card date-card">
+       <span class="label">
+        📍 Treffpunkt
+       </span>
+       <strong id="eventPlace">
+        Ort folgt
+       </strong>
+      </article>
+     </div>
+    </section>
+    <section class="reveal" id="zusagen">
+     <div class="section-head">
+      <h2>
+       Wer ist mit dabei?
+      </h2>
+      <p>
+       Tragt eure Zusage ein &ndash; so l&auml;sst sich besser planen, wie viele Teller und St&uuml;hle wir brauchen.
+      </p>
+     </div>
+     <div class="grid">
+      <article class="card wide">
+       <h3>
+        💌 Eure Zusage
+       </h3>
+       <form id="rsvpForm">
+        <div class="form-row">
+         <div class="field">
+          <label for="rName">
+           Name
+          </label>
+          <input autocomplete="name" id="rName" maxlength="40" placeholder="Wer kommt?" required=""/>
+         </div>
+         <div class="field">
+          <label for="rCount">
+           Personen
+          </label>
+          <input id="rCount" max="20" min="1" required="" type="number" value="1"/>
+         </div>
+        </div>
+<div class="form-actions">
+         <button class="btn primary" type="submit">
+          Zusage speichern &hearts;
+         </button>
+        </div>
+       </form>
+      </article>
+      <article class="card narrow">
+       <div class="feature">
+        <div class="feature-icon">
+         🫶
+        </div>
+        <div>
+         <h3>
+          Zusammen sind wir &hellip;
+         </h3>
+         <p id="rsvpCount">
+          Noch keine Zusagen eingetragen.
+         </p>
+         <p class="small-note rsvp-device-note">Die gemeinsame Teilnehmerliste ist öffentlich sichtbar. Bitte trage nur deinen Vornamen und die Anzahl der Personen ein. Keine privaten Informationen.</p>
+        </div>
+       </div>
+      </article>
+     </div>
+     <div aria-live="polite" class="entries" id="rsvpEntries">
+     </div>
+    </section>
+    <section class="reveal" id="mitbringen" hidden>
+     <div class="section-head">
+      <h2>
+       Die Mitbringliste
+      </h2>
+      <p>
+       Damit wir am Ende nicht zw&ouml;lf Kartoffelsalate und keinen Nachtisch haben. 😉
+      </p>
+     </div>
+     <div class="grid">
+      <article class="card wide">
+       <h3>
+        🎁 Etwas zur Tafel beitragen
+       </h3>
+       <form id="bringForm">
+        <div class="form-row">
+         <div class="field">
+          <label for="bItem">
+           Was bringst du mit?
+          </label>
+          <input id="bItem" maxlength="90" placeholder="Pl&auml;tzchen, Salat, Getr&auml;nke &hellip;" required=""/>
+         </div>
+         <div class="field">
+          <label for="bWho">
+           Von wem?
+          </label>
+          <input id="bWho" maxlength="60" placeholder="Name" required=""/>
+         </div>
+        </div>
+        <div class="form-actions">
+         <button class="btn primary" type="submit">
+          Zur Liste hinzuf&uuml;gen +
+         </button>
+         <span class="small-note">
+          Eintr&auml;ge k&ouml;nnen hier wieder entfernt werden.
+         </span>
+        </div>
+       </form>
+      </article>
+      <article class="card narrow">
+       <div class="feature">
+        <div class="feature-icon">
+         🍪
+        </div>
+        <div>
+         <h3>
+          Schon auf dem Tisch
+         </h3>
+         <p id="bringCount">
+          Noch ist alles offen &ndash; die Liste freut sich auf Ideen.
+         </p>
+        </div>
+       </div>
+      </article>
+     </div>
+     <div aria-live="polite" class="entries" id="bringEntries">
+     </div>
+    </section>
+    <section id="spiel" class="reveal">
+        <div class="section-head">
+            <h2>Rentier auf Abwegen 🎄</h2>
+            <p>Tippe auf den Bildschirm oder drücke die Leertaste, um zu springen. Je länger du tippst, desto höher springt das Rentier.</p>
+            <p>Note: es ist normal das es teils so lange lädt</p>
+        </div>
+<article class="card game-card">
+    <div class="godot-game-frame" id="godotGameHost">
+        <div class="godot-game-launch" id="godotGameLaunch">
+            <p>Bereit für ein kleines Weihnachtsabenteuer?</p>
+            <button
+                class="btn primary"
+                id="startGodotGame"
+                type="button"
+            >
+                🎮 Spiel starten
+            </button>
+        </div>
+    </div>
+</article>
+    </section>
+   </main>
+   <footer class="footer" id="siteFooter">
+        <p>Made by Simon</p>
+   </footer>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
+</body>
+</html>
